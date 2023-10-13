@@ -30,7 +30,7 @@ public class UsersController {
         UserDto userDto = new ModelMapper().map(userDetails, UserDto.class);
 
         UserDto createdUser = usersService.createUser(userDto);
-
+        //createdUser.setUserId("");
         return modelMapper.map(createdUser, UserRest.class);
     }
 
